@@ -1,0 +1,16 @@
+---
+- hosts: ansible-kitchen
+  remote_user: root
+
+  tasks:
+    - name: install postgresql
+      yum: name=postgresql-server state=latest
+
+    - name: initialize database
+      command: service postgresql initdb
+
+    - name: ensure db server is running
+      service: name=postgresql state=started
+
+    - name: ensure that db server is enabled
+      service: name=postgresql enabled=yes

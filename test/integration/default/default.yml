@@ -1,0 +1,9 @@
+---
+- hosts: ansible-kitchen
+  remote_user: root
+
+  roles:
+    - yatesr.timezone
+
+  vars:
+    timezone: Europe/Warsaw
