@@ -2,12 +2,13 @@
 
 #### Structure
 ```
-├── ansible.cfg                                   # asible config file 
+├── .kitchen.yml                                  # kitchen config file 
+├── ansible.cfg                                   # ansible config file 
 ├── chefignore  
 ├── Gemfile
 ├── Gemfile.lock
 ├── README.md
-├── requirements.yml                              # external roles which should be installed into contaners
+├── requirements.yml                              # external roles which should be installed into container
 ├── roles                                         # local roles which will be copied to container
 │   └── motd                                      # example local role 
 │       ├── handlers
