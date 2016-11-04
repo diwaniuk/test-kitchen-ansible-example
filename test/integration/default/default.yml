@@ -3,7 +3,10 @@
   remote_user: root
 
   roles:
-    - yatesr.timezone
+    - role: motd
+    - role: yatesr.timezone
+    - role: bennojoy.ntp
+      ntp_server: [2.ubuntu.pool.ntp.org, 1.ubuntu.pool.ntp.org]
 
   vars:
     timezone: Europe/Warsaw

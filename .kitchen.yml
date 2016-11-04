@@ -7,11 +7,16 @@ provisioner:
   hosts: ansible-kitchen
   ansible_verbose: true
   ansible_verbosity: 1
+  ansible_diff: true
   requirements_path: requirements.yml
 
 platforms:
   - name: ubuntu-14.04
+    driver_settings:
+      - hostname: ubuntu-prd.hawatel.io
   - name: centos-6.7
+    driver_settings:
+      - hostname: centos-prd.hawatel.io
 
 suites:
   - name: default
